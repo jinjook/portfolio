@@ -1,0 +1,84 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+}
+
+.page h4 {
+  font-size: 4rem;
+  margin: 100px 0 0 10px;
+}
+
+body section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lavender;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-size: 2.5rem;
+  /* padding: 20px; */
+}
+
+section a {
+  padding: 0 15px 0 15px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  font-family: "Poor Story", serif;
+  font-style: normal;
+  width: 100%;
+  justify-content: center;
+}
+
+#profile img {
+  width: 200px;
+  border-radius: 20px;
+  margin: 50px 0 10px 60px;
+}
+
+#profileInfo {
+  margin: 30px 0 0 70px;
+}
+
+#profileInfo > :first-child {
+  font-family: "Poor Story", serif;
+}
+
+#profile p {
+  margin-top: 15px;
+}
+
+#profileDetail {
+  font-family: "Poor Story", serif;
+  margin: 130px 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+
+#profileDetail div {
+  margin-bottom: 80px;
+}
+
+#profileDetail h2 {
+  padding-bottom: 18px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#profileDetail p {
+  display: flex;
+  justify-content: space-between;
+}
