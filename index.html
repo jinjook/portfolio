@@ -12,20 +12,24 @@
       href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/ef885bd654.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="page">
-      <section>
+    <section class="page" id="home">
+      <div id="bar">
         <div><a href="#">Jinju's Portfolio</a></div>
         <div>
           <a href="#profile">Profile</a>
           <a href="#project1">Project 1</a>
           <a href="#">Project 2</a>
         </div>
-      </section>
+      </div>
       <h1 class="title">안녕하세요, 신입 웹 개발자 김진주입니다.</h1>
-    </div>
-    <div class="page" id="profile">
+    </section>
+    <section class="page" id="profile">
       <div>
         <h4>Profile</h4>
         <img src="resources/profile image.jpeg" alt="" />
@@ -35,18 +39,18 @@
           <p>1994.02.01</p>
           <p>010-2415-0417</p>
           <p>kjj_21@naver.com</p>
-          <p>https://github.com/jinjook</p>
+          <p><a href="https://github.com/jinjook">https://github.com/jinjook <i class="fa-solid fa-link"></i></a></p>
         </div>
       </div>
       <div id="profileDetail">
         <div>
           <h2>학력사항</h2>
           <p>
-            <span>~2012</span>
+            <span>2009 ~ 2012.02</span>
             <span>세화여자고등학교 졸업</span>
           </p>
           <p>
-            <span>2013~</span>
+            <span>2013. 03 ~ 2018. 02</span>
             <span>성신여자대학교 의류학과 졸업</span>
           </p>
         </div>
@@ -62,12 +66,71 @@
         </div>
         <div>
           <h2>기술스택</h2>
-          <p></p>
+          <p>
+            <div style="color: red;">수정 필요</div>
+              <ol>
+                <li>
+                  BACK-END : java 21, MySql 8, Spring Boot 3, MyBatis, JPA,
+                  QueryDSL
+                </li>
+                <li>
+                  FRONT-END : HTML 5 & CSS3, JAvaScript (ES6), TypeScript,
+                  React, Redux
+                </li>
+              </ol>
+          </p>
         </div>
       </div>
-    </div>
-    <div class="page" id="project1">
+    </section>
+    <section class="page" id="project1">
       <h4>Project 1</h4>
-    </div>
+      <div>
+        <p>주제 선정</p>
+        <ul>
+          <li># 여행 계획 및 일정 관리의 효율성을 높이고자 함</li>
+          <li># 여행 참가자들이 일정을 쉽게 확인하고 조정할 수 있도록</li>
+          <li># 여행 정보 공유 제공</li>
+          <li># 여행 스타일 및 취향에 맞는 맞춤형 일정 제시</li>
+        </ul> 
+      </div>
+      <div>
+        <p>기술 스택</p>
+        <span ><img id="stack" src="resources/project1 stack.jpg"></span>
+      </div>
+      <div>
+        <p>Code</p>
+        <img src="resources/calendar.gif" alt="" class="gif">
+        
+        <button class="cta">
+          <span class="hover-underline-animation"> 코드 보러가기 </span>
+          <svg
+            id="arrow-horizontal"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="10"
+            viewBox="0 0 46 16"
+          >
+            <path
+              id="Path_10"
+              data-name="Path 10"
+              d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+              transform="translate(30)"
+            ></path>
+          </svg>
+        </button>
+        <!-- 모달 구조 -->
+        <div class="modal" id="imageModal">
+          <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <button class="prev" id="prevBtn">&#10094;</button>
+            <img id="modalImage" src="resources/일정추가.jpg" alt="">
+            <button class="next" id="nextBtn">&#10095;</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="index.js"></script>
   </body>
 </html>

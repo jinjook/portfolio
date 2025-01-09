@@ -2,11 +2,18 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  margin-bottom: 20px;
+}
+
 .page {
   height: 100vh;
   display: flex;
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .page h4 {
@@ -14,7 +21,7 @@ html {
   margin: 100px 0 0 10px;
 }
 
-body section {
+#bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +35,7 @@ body section {
   /* padding: 20px; */
 }
 
-section a {
+#bar a {
   padding: 0 15px 0 15px;
 }
 
@@ -81,4 +88,151 @@ section a {
 #profileDetail p {
   display: flex;
   justify-content: space-between;
+}
+
+#project1 {
+  display: flex;
+  flex-direction: column;
+}
+
+#project1 div {
+  font-family: "Poor Story", serif;
+}
+
+#project1 p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#project1 li {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+#stack {
+  width: 60%;
+  margin-left: 20px;
+  border-radius: 65px;
+}
+
+.gif {
+  width: 80%;
+  margin-left: 20px;
+}
+
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* 모달창 */
+.modal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  /* height: 100%; */
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  top: -4px;
+  right: -1px;
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+/* 슬라이드 버튼 */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
