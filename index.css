@@ -117,9 +117,19 @@ section {
   border-radius: 65px;
 }
 
+.step {
+  margin: 30px;
+  font-size: 1.3rem;
+}
+
 .gif {
   width: 80%;
-  margin-left: 20px;
+  margin-left: 30px;
+}
+
+.codeStep {
+  padding-bottom: 50px;
+  border-bottom: #ddd 1px solid;
 }
 
 /* From Uiverse.io by alexmaracinaru */
