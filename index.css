@@ -8,6 +8,7 @@ section {
 
 .page {
   height: 100vh;
+  background-color: #ddd;
   display: flex;
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
@@ -25,14 +26,19 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lavender;
   position: fixed;
   width: 100%;
   height: 80px;
+  background-color: #ddd;
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
   font-size: 2.5rem;
+  border-bottom: black 1px solid;
   /* padding: 20px; */
+}
+
+#bar:hover {
+  background-color: darkgrey;
 }
 
 #bar a {
