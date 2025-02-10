@@ -19,14 +19,14 @@
   </head>
   <body>
     <section class="page" id="home">
-      <div id="bar">
+      <aside id="bar">
         <div><a href="#">Jinju's Portfolio</a></div>
-        <div>
+        <div id="menu">
           <a href="#profile">Profile</a>
           <a href="#project1">Project 1</a>
-          <a href="#">Project 2</a>
+          <a href="#project2">Project 2</a>
         </div>
-      </div>
+      </aside>
       <h1 class="title">안녕하세요, 신입 웹 개발자 김진주입니다.</h1>
     </section>
     <section class="page" id="profile">
@@ -39,7 +39,7 @@
           <p>1994.02.01</p>
           <p>010-2415-0417</p>
           <p>kjj_21@naver.com</p>
-          <p><a href="https://github.com/jinjook">https://github.com/jinjook <i class="fa-solid fa-link"></i></a></p>
+          <p><a href="https://github.com/jinjook">https://github.com/jinjook<i class="fa-solid fa-link"></i></a></p>
         </div>
       </div>
       <div id="profileDetail">
@@ -59,108 +59,94 @@
           <p>
             <span>2024. 05. 28 ~ 2024. 11. 13</span>
             <span
-              >KH정보교육원 (디지털컨버전스)공공데이터 융합 자바개발자
-              양성과정A30</span
+              >KH정보교육원 | (디지털컨버전스)공공데이터 융합 자바개발자
+              양성과정A30 수료</span
             >
           </p>
         </div>
         <div>
           <h2>기술스택</h2>
-          <p>
-            <div style="color: red;">수정 필요</div>
-              <ol>
-                <li>
-                  BACK-END : java 21, MySql 8, Spring Boot 3, MyBatis, JPA,
-                  QueryDSL
-                </li>
-                <li>
-                  FRONT-END : HTML 5 & CSS3, JAvaScript (ES6), TypeScript,
-                  React, Redux
-                </li>
-              </ol>
-          </p>
+          <div>
+            <p>
+              <h3>Back-End</h3>
+              <span>Java 21, MySql 8, Spring Boot 3, MyBatis, JPA, QueryDSL</span>
+            </p>
+            <p>
+              <h3>Front-End</h3>
+              <span>HTML 5, CSS3, JAvaScript (ES6), TypeScript, React, Redux</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
     <section class="page" id="project1">
       <h4>Project 1</h4>
-      <div>
-        <p>주제 선정</p>
-        <ul>
-          <li># 여행 계획 및 일정 관리의 효율성을 높이고자 함</li>
-          <li># 여행 참가자들이 일정을 쉽게 확인하고 조정할 수 있도록</li>
-          <li># 여행 정보 공유 제공</li>
-          <li># 여행 스타일 및 취향에 맞는 맞춤형 일정 제시</li>
-        </ul> 
-      </div>
-      <div>
-        <p>기술 스택</p>
-        <span ><img id="stack" src="resources/project1 stack.jpg"></span>
-      </div>
-      <div>
-        <p>Code</p>
-        <div class="codeStep">
-          <div class="step">일정 추가</div>
-          <img src="resources/calendar.gif" alt="" class="gif">
-          
-          <button class="cta" id="open">
-            <span class="hover-underline-animation"> 코드 보러가기 </span>
-            <svg
-              id="arrow-horizontal"
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="10"
-              viewBox="0 0 46 16"
-            >
-              <path
-                id="Path_10"
-                data-name="Path 10"
-                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                transform="translate(30)"
-              ></path>
-            </svg>
-          </button>
-          <!-- 모달 구조 -->
-          <div class="modal" id="imageModal">
-            <div class="modal-content">
-              <button class="close-btn" id="closeModal">&times;</button>
-              <button class="prev" id="prevBtn">&#10094;</button>
-              <img id="modalImage" src="" alt="">
-              <button class="next" id="nextBtn">&#10095;</button>
-            </div>
-          </div>
+      <div id="project1Detail">
+        <div>
+          <p>기간</p>
+          <span>2024-07-25 ~ 2024-09-13</span>
         </div>
-        <div class="codeStep">
-          <div class="step">세부 일정 추가</div>
-          <img src="resources/세부일정.jpg" alt="" class="gif">
-          
-          <button class="cta" id="open2">
-            <span class="hover-underline-animation"> 코드 보러가기 </span>
-            <svg
-              id="arrow-horizontal2"
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="10"
-              viewBox="0 0 46 16"
-            >
-              <path
-                id="Path_11"
-                data-name="Path 10"
-                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                transform="translate(30)"
-              ></path>
-            </svg>
-          </button>
-          <!-- 모달 구조 -->
-          <div class="modal" id="imageModal2">
-            <div class="modal-content">
-              <button class="close-btn" id="closeModal2">&times;</button>
-              <button class="prev" id="prevBtn2">&#10094;</button>
-              <img id="modalImage2" src="" alt="">
-              <button class="next" id="nextBtn2">&#10095;</button>
-            </div>
-          </div>
+        <div>
+          <p>주제 선정</p>
+          <ul>
+            <li># 여행 계획 및 일정 관리의 효율성을 높이고자 함</li>
+            <li># 여행 참가자들이 일정을 쉽게 확인하고 조정할 수 있도록</li>
+            <li># 여행 정보 공유 제공</li>
+            <li># 여행 스타일 및 취향에 맞는 맞춤형 일정 제시</li>
+          </ul> 
+        </div>
+        <div>
+          <p>기술 스택</p>
+          <span>HTML5 CSS3 JavaScript jQuery Ajax JSP JSTL</span>
+        </div>
+        <div>
+          <p>My Work</p>
+          <ul>
+            <li># Data Base 구축</li>
+            <li># 스케줄 및 세부일정 추가</li>
+            <li># 카카오맵 오픈 API 사용, 정보 저장</li>
+            <li># 저장된 세부일정 날짜별로 list up</li>
+            <li># 일정 및 그룹 삭제</li>
+          </ul> 
+        </div>
       </div>
+      <div id="project1Img">
+        <img src="resources/calendar.gif">
+      </div>
+    </section>
+    <section class="page" id="project2">
+      <h4>Project 2</h4>
+      <div id="project2Detail">
+        <div>
+          <p>기간</p>
+          <span>2024-09-23 ~ 2024-10-31</span>
+        </div>
+        <div>
+          <p>주제 선정</p>
+          <ul>
+            <li># 직장인을 위한 패션 플랫폼</li>
+            <li># 직종별로 같은 업계의 직장인들의 착장 공유</li>
+          </ul> 
+        </div>
+        <div>
+          <p>기술 스택</p>
+          <span>React JPA Java21 MySql</span>
+        </div>
+        <div>
+          <p>My Work</p>
+          <ul>
+            <li># 게시물 업로드
+              <span> - 사진 갯수 제한, 업로드 순서 설정</span>
+            </li>
+            <li># 게시물 수정
+              <span>- 사진 추가 불가, 삭제만 가능, 한개 남았을 땐 삭제 불가능</span>
+            </li>
+            <li># 게시물 삭제</li>
+          </ul> 
+        </div>
+      </div>
+      <div id="project2Img">
+        <img src="resources/FLOW upload.gif">
       </div>
     </section>
 

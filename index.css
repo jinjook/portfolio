@@ -2,47 +2,63 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  margin-bottom: 20px;
-}
-
 .page {
   height: 100vh;
   background-color: #ddd;
   display: flex;
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
-  box-sizing: border-box;
-  overflow: hidden;
-  overflow-y: scroll;
+  border-bottom: solid 1px black;
 }
 
 .page h4 {
   font-size: 4rem;
-  margin: 100px 0 0 10px;
+  margin: 30px 20px 0 350px;
 }
 
 #bar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100%;
-  height: 80px;
-  background-color: #ddd;
+  width: 300px;
+  height: 100%;
+  background-color: black;
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
   font-size: 2.5rem;
-  border-bottom: black 1px solid;
-  /* padding: 20px; */
-}
-
-#bar:hover {
-  background-color: darkgrey;
 }
 
 #bar a {
-  padding: 0 15px 0 15px;
+  color: white;
+  display: flex;
+  background-color: black;
+  width: 180px;
+  padding: 5px;
+  margin: 50px 0;
+  position: relative;
+}
+
+#menu a {
+  font-size: 2.2rem;
+  z-index: 1;
+}
+
+#menu a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; /* 초기 너비 0% */
+  height: 100%;
+  background-color: rgb(233, 207, 34);
+  transition: width 0.5s ease-in-out;
+  z-index: -1;
+}
+
+#menu a:hover::before {
+  width: 100%; /* hover 시 전체 너비 */
 }
 
 .title {
@@ -53,20 +69,25 @@ section {
   font-style: normal;
   width: 100%;
   justify-content: center;
+  margin: 0 20px 0 300px;
 }
 
 #profile img {
   width: 200px;
   border-radius: 20px;
-  margin: 50px 0 10px 60px;
+  margin: 50px 0px 10px 350px;
 }
 
 #profileInfo {
-  margin: 30px 0 0 70px;
+  margin: 50px 0 0 350px;
+  width: 250px;
 }
 
 #profileInfo > :first-child {
   font-family: "Poor Story", serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
 }
 
 #profile p {
@@ -75,10 +96,10 @@ section {
 
 #profileDetail {
   font-family: "Poor Story", serif;
-  margin: 130px 0 0 150px;
+  margin: 150px 0 0 100px;
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 750px;
 }
 
 #profileDetail div {
@@ -89,11 +110,18 @@ section {
   padding-bottom: 18px;
   font-size: 1.5rem;
   font-weight: bold;
+  border-bottom: solid 1px black;
 }
 
 #profileDetail p {
   display: flex;
   justify-content: space-between;
+}
+
+#profileDetail h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 0;
 }
 
 #project1 {
@@ -103,6 +131,7 @@ section {
 
 #project1 div {
   font-family: "Poor Story", serif;
+  margin-right: 30px;
 }
 
 #project1 p {
@@ -112,143 +141,62 @@ section {
   margin-top: 20px;
 }
 
+#project1 span {
+  padding: 10px 20px 0 10px;
+}
+
 #project1 li {
   padding-left: 20px;
   margin-top: 10px;
 }
 
-#stack {
-  width: 60%;
-  margin-left: 20px;
-  border-radius: 65px;
+#project1Detail {
+  display: flex;
+  margin-left: 350px;
 }
 
-.step {
-  margin: 30px;
-  font-size: 1.3rem;
+#project1Img img {
+  width: 800px;
+  margin: 30px 350px;
 }
 
-.gif {
-  width: 80%;
-  margin-left: 30px;
+#project2 {
+  display: flex;
+  flex-direction: column;
 }
 
-.codeStep {
-  padding-bottom: 50px;
-  border-bottom: #ddd 1px solid;
+#project2 div {
+  font-family: "Poor Story", serif;
+  margin-right: 30px;
 }
 
-/* From Uiverse.io by alexmaracinaru */
-.cta {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.cta span {
-  padding-bottom: 7px;
-  letter-spacing: 4px;
-  font-size: 14px;
-  padding-right: 15px;
-  text-transform: uppercase;
-}
-
-.cta svg {
-  transform: translateX(-8px);
-  transition: all 0.3s ease;
-}
-
-.cta:hover svg {
-  transform: translateX(0);
-}
-
-.cta:active svg {
-  transform: scale(0.9);
-}
-
-.hover-underline-animation {
-  position: relative;
-  color: black;
-  padding-bottom: 20px;
-}
-
-.hover-underline-animation:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #000000;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .hover-underline-animation:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* 모달창 */
-.modal {
-  display: none; /* 기본적으로 숨김 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 80%;
-  /* height: 100%; */
-  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background-color: #fff;
+#project2 p {
+  font-size: 1.6rem;
+  font-weight: bold;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  position: relative;
+  margin-top: 20px;
 }
 
-.modal-content img {
-  max-width: 100%;
-  height: auto;
-  overflow-y: auto;
-  border-radius: 8px;
+#project2 span {
+  padding: 10px 20px 0 3px;
 }
 
-/* 닫기 버튼 */
-.close-btn {
-  position: absolute;
-  top: -4px;
-  right: -1px;
-  background: none;
-  border: none;
-  font-size: 2.4rem;
-  cursor: pointer;
+#project2 li {
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-/* 슬라이드 버튼 */
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
+#project2 li span {
+  display: flex;
+  padding-left: 20px;
 }
 
-.prev {
-  left: 10px;
+#project2Detail {
+  display: flex;
+  margin-left: 350px;
 }
 
-.next {
-  right: 10px;
+#project2Img img {
+  width: 800px;
+  margin: 30px 350px;
 }
